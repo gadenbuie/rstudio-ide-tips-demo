@@ -1,0 +1,34 @@
+---
+title: "Try Infinite Moon Reader"
+author: "Luke Skywalker"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Star Wars Film Appearances
+
+Plot count of film appearances by character as a bar chart.
+Then color each bar by the character's homeworld.
+After each change,
+press <kbd>Cmd/Ctrl</kbd> + <kbd>S</kbd> to save
+and refresh the preview.
+
+```{r}
+starwars %>%
+  select(name, films) %>% 
+  unnest(films)
+```
+
+
+## Infinite Moon Reader
+
+- To start **Infinite Moon Reader**, select it from the _Addins_ drop-down.
+
+- To stop the live preview, restart your R session  
+  
+  _Hint: Use a keyboard shortcut!_
