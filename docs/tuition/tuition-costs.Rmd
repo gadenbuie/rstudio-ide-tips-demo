@@ -1,5 +1,25 @@
-# --- this file is also available as an Rmd in docs/tuition/tuition-costs.Rmd
+---
+title: "Historical Tuition Costs"
+subtitle: "Try Infinite Moon Reader"
+author: "Tidy Tuesday"
+date: "2020-03-10"
+output: html_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Historical Tuition Costs
+
+The goal is to plot historical tuition averages, 
+using data from [TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-03-10).
+Refactor the code below as much as you want.
+After each change in this document,
+press <kbd>Cmd/Ctrl</kbd> + <kbd>S</kbd> to save
+and refresh the preview.
+
+```{r echo=FALSE, fig.width=8, fig.height=4}
 library(tidyverse)
 
 # {here} makes it easy to find files in projects!
@@ -33,3 +53,19 @@ private_school <- raw_nces %>% slice(43:(n() - 1)) %>% mutate(type = "Private") 
 
 
 tuition <- bind_rows(all_school, public_school, private_school)
+
+tuition %>%
+  filter(year >= 2000, tuition_type == "4 Year Current") %>%
+  ggplot() +
+  aes(year, tuition_cost, color = type) +
+  geom_point()
+```
+
+
+## Infinite Moon Reader
+
+- To start **Infinite Moon Reader**, select it from the _Addins_ drop-down.
+
+- To stop the live preview, restart your R session  
+  
+  _Hint: Use a keyboard shortcut!_
