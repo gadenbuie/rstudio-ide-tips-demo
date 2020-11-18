@@ -10,7 +10,7 @@ remotes::install_cran("usethis")    # Common actions from command line
 remotes::install_cran("here")       # Easy paths in projects and .Rmd
 
 # Style ----
-remotes::install_github("gadenbuie/rsthemes") # Themes for RStudio
+remotes::install_github("gadenbuie/rsthemes", dependencies = TRUE) # Themes for RStudio
 
 remotes::install_cran("styler")  # style your R code
 

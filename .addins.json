@@ -1,0 +1,6 @@
+{
+    "rsthemes::use_theme_toggle": "Ctrl+Alt+D",
+    "rsthemes::use_theme_favorite": "Ctrl+Alt+N",
+    "styler:::style_selection": "Ctrl+Shift+S",
+    "styler::style_file": "Ctrl+Shift+Cmd+S"
+}
