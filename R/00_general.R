@@ -6,7 +6,7 @@ View(starwars)
 
 # Give your zoomed table a name...
 starwars %>%
-  filter(species == "human") %>%
+  filter(species == "Human") %>%
   View()
 
 
