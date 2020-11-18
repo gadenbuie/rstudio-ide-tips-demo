@@ -12,10 +12,10 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   rsthemes::set_theme_light("Textmate (default)")  # light theme
   rsthemes::set_theme_dark("Oceanic Plus {rsthemes}") # dark theme
   rsthemes::set_theme_favorite(c(
-    "Night Owl {rsthemes}",
-    "Flat White {rsthemes}",
-    "One Dark {rsthemes}",
     "GitHub {rsthemes}",
+    "Flat White {rsthemes}",
+    "Night Owl {rsthemes}",
+    "One Dark {rsthemes}",
     "Horizon Dark {rsthemes}"
   ))
 
